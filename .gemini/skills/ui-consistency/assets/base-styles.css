@@ -1,0 +1,52 @@
+:root {
+    --primary-color: #001A33;
+    --secondary-color: #C5A059;
+    --bg-light: #F8F9FA;
+    --bg-white: #FFFFFF;
+    --text-main: #333333;
+    --text-muted: #666666;
+    --text-light: #F8F9FA;
+    --container-width: 1100px;
+    --transition: all 0.3s ease;
+    --border-radius: 4px;
+    --card-radius: 8px;
+}
+
+/* Base resets & utilities */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text-main); }
+.container { max-width: var(--container-width); margin: 0 auto; padding: 0 2rem; }
+
+/* Standard Section */
+.section { padding: 8rem 0; }
+@media (max-width: 768px) { .section { padding: 5rem 0; } }
+
+/* Standard Headings */
+h2.section-title {
+    font-size: 2.5rem;
+    position: relative;
+    padding-bottom: 1rem;
+    margin-bottom: 3rem;
+}
+h2.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background-color: var(--secondary-color);
+}
+
+/* Standard Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.btn-primary { background-color: var(--secondary-color); color: white; }
+.btn-primary:hover { background-color: #b38e4a; transform: translateY(-2px); }
